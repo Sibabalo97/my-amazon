@@ -3,10 +3,12 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import Footer from "./Footer/Footer ";
 
 function Checkout() {
   const [{ basket, user}, dispatch] = useStateValue();
   return (
+    <>
     <div className="checkout">
       <div className="checkout__left">
         <img
@@ -37,6 +39,10 @@ function Checkout() {
         <Subtotal />
       </div>
     </div>
+    <div>
+      <Footer/>
+    </div>
+    </>
   );
 }
 
